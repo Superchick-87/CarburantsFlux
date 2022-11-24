@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="css/style.css" rel="stylesheet">
+    
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=yes"/>
+        <meta name="viewport" content="width=device-width"/>
+        <meta charset="UTF-8">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.1/moment-with-locales.js"></script>
+    <script>moment.locale('fr');
+    </script>
+	
+    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+
+    <!-- JS file -->
+    <script src="EasyAutocomplete-1.3.5/jquery.easy-autocomplete.min.js"></script>
+    <!-- CSS file -->
+    <!-- <link rel="stylesheet" href="EasyAutocomplete-1.3.5/easy-autocomplete.min.css"> -->
+    <!-- Additional CSS Themes file - not required-->
+    <link rel="stylesheet" href="./EasyAutocomplete-1.3.5/easy-autocomplete.themes.min.css">
+
+    <script src="js/done.js"></script>
+	<title>Carburants</title>
+</head>
+<body>
+    <img src="images/visuTete.png" style="width:150px;">
+    <h2>Retrouvez tous les prix des carburants</br>près de chez vous !</h2>
+    <legend class="consigne">Entrez le nom d'une commune</br>(sans accent)</legend>
+    <div id="search" class="flex justif-align-center">
+        <input id="loc" type="text" value=""  required placeholder="Ex. Bord..." >
+        <div id="supp" type="text" class="suppression"></div>   
+    </div>
+    <input id="recherceDesk" type="button" value="RECHERCHER" class="recherceDesk" onclick="buttonClickGET()">
+    <div  id="recherceMob">
+        <div class="rechercheMob" onclick="buttonClickGET()"></div>
+        <div>Rechercher</div> 
+    </div>
+    </br>
+    <div id = 'erreur1' class="espacebottom" style="display: none;">
+        <div class="erreur_messtitre">Oups !!!</div>
+        <div class="erreur_mess">Vous devez saisir les premières lettres d'une commune afin de la sélectionner dans la liste qui s'affiche.</div>
+        <div class="erreur1_visu"></div>
+    </div>
+    <div id = 'erreur2' class="espacebottom" style="display: none;">
+        <div class="erreur_messtitre">Oups !!!</div>
+        <div class="erreur_mess">Nous n'avons pas de résultats pour cette commune</div>
+        <div class="erreur2_visu"></div>
+    </div>
+   
+    <div id="done"></div>
+    <p id="legende" style="display: none;"><i>Maj = dernière mise à jour des prix</i></p>
+    </br>
+    <p class="source">Les tarifs affichés proviennent du site <a href="https://www.prix-carburants.gouv.fr/"> Prix-carburants.gouv.fr</a> et sont directement renseignés par les gérants des points de vente qui en ont l'obligation légale. Les prix doivent être mis à jour dès qu'ils font l'objet d'un changement, mais un délai d'affichage peut être constaté sur le site.</p>
+    <footer></footer>
+</body>
+
+<script src="js/camelize.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+
+document.getElementById("supp").addEventListener("click", myFunction);
+function myFunction() {
+  document.getElementById("loc").value = "";
+}
+
+    var options = {
+    url: "datas/communes.json",
+    getValue: "communes",
+    // template: {
+    //     type: "description",
+    //     fields: {
+    //         description: "marque"
+    //     }
+    // },
+    list: {
+        match: {
+            enabled: true
+        },
+        maxNumberOfElements: 50
+    },
+    theme: "plate-dark"
+};
+$("#loc").easyAutocomplete(options);
+document.getElementById("search").childNodes[1].removeAttribute('style');
+</script>
+
+</html>
