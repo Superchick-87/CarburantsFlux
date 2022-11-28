@@ -1,4 +1,5 @@
 <?php
+include (dirname(__FILE__).'/includes/ddc.php');
 function read($csv){
 		    $file = fopen($csv, 'r');
 		    while (!feof($file) ) {
@@ -77,10 +78,6 @@ if (@file_exists(dirname(__FILE__).'/lang/fra.php')) {
 
 // ---------------------------------------------------------
 
-// set font
-// $pdf->SetFont('dejavusans', '', 10);
-
-
 // add a page
 $pdf->AddPage();
 // get esternal file content
@@ -90,81 +87,67 @@ $border=0;
 // writeHTML($html, $ln=true, $fill=false, $reseth=false, $cell=false, $align='')
 // writeHTMLCell($w, $h, $x, $y, $html='', $border=0, $ln=0, $fill=0, $reseth=true, $align='', $autopadding=true)
 
-/*========================================================
-=      Paramètres - Positions des blocs + Styles         =
-========================================================*/
 // $fontname = TCPDF_FONTS::addTTFfont('/TCPDF-master/fonts/ArialNarrowItalic.ttf', 'TrueTypeUnicode', '', 96);
 // $pdf->SetFont($fontname, '', 14, '', false);
 	/*----------  Font  ----------*/
-	
-	$font_C = 'arialb';
-	$fontSize_C = 12;
-
-	$font_RDate = 'ariali';
-	$fontSize_C = 7;
-
-	$font_R = 'arial';
-	$fontSize_R = 9.5;
-
-	$fontSize_titre = 18.7;
-
-	/*----------  Fin Font  ----------*/
-	
-
-	/*----------  Style partie résultat  ----------*/
-	/**
-	 * " D " -> utilisé pour "Domicile"
-	 * " E " -> utilisé pour "Extérieur"
-	 * " R " -> utilisé pour "Résultats"
-	 */
-	$equipeD_ListeR= 'style="font-stretch: condensed; letter-spacing: 0px; line-height:10px; width:55px; height:10px; text-align:right;"';
-	$equipeE_ListeR= 'style="font-stretch: condensed; letter-spacing: 0px; line-height:10px; width:55px; height:10px; text-align:left;"';
-	$espaceurblanc = 'style=" width:1px; height:10px; text-align:center;background-color: white;"';
-	$espaceur = 'style=" width:2px; height:10px; text-align:center;"';
-	/*----------  Fin Style partie résultat  ----------*/
-	$stylerang = 'style="width:22px; text-align:center;"';
-	$stylepays = 'style="width:90px; text-align:left;"';
-	$stylemedailles = 'style="width:30px; text-align:center;"';
-	$styletotal = 'style="width:30px; text-align:center;"';
-
-/*=====  End of Paramètres - Positions des blocs + Styles ======*/
+	$pdf->ImageSVG('images/Fond.svg',0,0,46.5,186,'','','', $border,false);
 
 
-$pdf->ImageSVG('images/Fond.svg',0,0,46.5,186,'','','', $border,false);
+$echelle=0.5;
+function saut($n){
+	$y = '';
+	if ($n == 0 || $n == 1){
+		$y = 40.7;
+		return $y;
+	}
+	if ($n == 2 || $n == 3){
+		$y = 45.5;
+		return $y;
+	}
+	if ($n == 4 || $n == 5){
+		$y = 49.8;
+		return $y;
+	}
+	if ($n == 6 || $n == 7){
+		$y = 53.9;
+		return $y;
+	}
+	if ($n == 8){
+		$y = 58.2;
+		return $y;
+	}
+	if ($n == 9){
+		$y = 62.8;
+		return $y;
+	}
+};
 
-/*================================
-=            Groupe C            =
-================================*/
-$logo = 'style=background-color:red;';
+$border = 0;
+$fitbox='R';	
 
-	// /*----------  Classements  ----------*/
-	
-	// create some HTML content
+for ($n=0; $n<count($csv); $n++) {
+	$pdf->SetTextColor(0,0,0,100);
+	$pdf->setCellPaddings(0,0,0,0);
 	$pdf->SetFont('arial','', 9);
+	$pdf->SetXY(6.9,(saut($n)+(10*$n)));
+	$pdf->Cell(39.6,'', $csv[$n][1],  $border, 0, 'L', 0, '', 1, false, '', 'M');
+	
+	$pdf->SetTextColor(0,0,0,0);
+	if ($n == 0 || $n == 1){
+		$pdf->SetTextColor(0,0,0,100);
+	}else {};
+	
+	$pdf->SetFont('arialb','', 9);
+	$pdf->SetXY(7.5,((saut($n)+(10*$n))+3.8));
+	$pdf->Cell(28.5,'', $csv[$n][2],  $border, 0, 'L', 0, '', 1, false, '', 'M');
 
-	// for ($n=0; $n<count($csv); $n++) {
-		// $html = 
-		// 	'<table style="height:100px;">
-		// 		<tr style="padding:0px 0px 0px 0px;">
-		// 			<td style="text-align:left; padding:0px 0px 0px 0px; width:25px; height:35px;" rowspan="2"><img style="padding:0px 0px 0px 0px;" src="images/logos/Aldi.png" alt=""></td>
-		// 			<td colspan="2">'.$csv[0][1].'</td>
-		// 		</tr>
-		// 		<tr style="padding:0px 0px 0px 0px;">
-		// 			<td>'.$csv[0][2].'</td>
-		// 			<td>'.$csv[0][3].'</td>
-		// 		</tr>
-		// 	</table>';
-			$html = $csv[0][1];
-		
-		// };
-		// // TCPDF::writeHTMLCell( $w,  $h,  $x,  $y,  $html = '',  $border,  $ln,  $fill = false,  $reseth = true,  $align = '',  $autopadding = true )
-		// $pdf->writeHTMLCell(35,100,2,40, $html, 1, 0, false,true, 'L',true);
-		// writeHTML($html, $ln=true, $fill=false, $reseth=false, $cell=false, $align='')
-		// $pdf->writeHTML($html, true, 0, false,true, 'L');
-// ---------------------------------------------------------
-$pdf->setXY(6.5,40);
-$pdf->Cell(40,'', 'xxxxxml$html$html$hxxxxmqmmq', 1, 1, 'L', 0, '', 0);
+	$pdf->SetXY(36,((saut($n)+(10*$n))+3.8));
+	$pdf->Cell(10,'', $csv[$n][3],  $border, 0, 'R', 0, '', 1, false, '', 'M');
 
+// Image method signature:
+// Image($file, $x='', $y='', $w=0, $h=0, $type='', $link='', $align='', $resize=false, $dpi=300, $palign='', $ismask=false, $imgmask=false, $border=0, $fitbox=false, $hidden=false, $fitonpage=false)
+$pdf->Image('images/logos/'.ddc($csv[$n][2]).'.png', 0, ((saut($n)+(10*$n))+1.4), 6.5, 10, 'PNG', '', '', false, 300, 'M', false, false, 0,'B', false, false);
+};
 // close and output PDF document
 // $pdf->Output('example_011.pdf', 'I');
 // $pdf->Output('ProductionPdf/EuroClassement_'.$datePdf.'.pdf','F');
