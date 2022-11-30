@@ -9,8 +9,24 @@
 
 /*  Fin Imports polices
 ------------------------------------------------------------------------------------------  */
-
-
+.titre {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-size: 5em;
+  font-weight: 700;
+  margin-bottom: auto;
+}
+.sstitre {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-size: 2em;
+  font-weight: 300;
+  margin-bottom: auto;
+}
+.visuPdf{
+  width: 60%;
+  margin: auto;
+}
 
 body {
   font-family: 'Roboto', serif;

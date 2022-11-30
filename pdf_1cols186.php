@@ -1,7 +1,12 @@
 <?php
 $ville = $_GET['ville'];
-echo $ville;
+// echo $ville.'</br>';
+$format = '1 col x 186';
+
 include (dirname(__FILE__).'/includes/ddc.php');
+include (dirname(__FILE__).'/includes/date.php');
+include (dirname(__FILE__).'/includes/visuPrint.php');
+
 function read($csv){
 		    $file = fopen($csv, 'r');
 		    while (!feof($file) ) {
@@ -10,7 +15,7 @@ function read($csv){
 		    fclose($file);
 		    return $line;
 		}
-		$csv = dirname(__FILE__).'/datas/prix_'.$ville.'.csv';
+		$csv = dirname(__FILE__).'/datas/'.$ville.'.csv';
 		$csv = read($csv);
 
 //============================================================+
@@ -153,7 +158,7 @@ $pdf->Image('images/logos/'.ddc($csv[$n][2]).'.png', 0, ((saut($n)+(10*$n))+1.4)
 // close and output PDF document
 // $pdf->Output('example_011.pdf', 'I');
 // $pdf->Output('ProductionPdf/EuroClassement_'.$datePdf.'.pdf','F');
-$pdf->Output('ProductionPdf/Infog_Carburants_'.$ville.'.pdf','F');
+$pdf->Output('ProductionPdf/Infog_Carburants_1col186_'.$ville.'_'.$date.'.pdf','F');
 
 //============================================================+
 // END OF FILE
