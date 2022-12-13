@@ -22,4 +22,20 @@
 		$tring = str_replace("-","</br>&#x2731;",$tring );
 		return $tring;
 	}
+	function marques($tring){
+		if (strlen($tring) > 0) {
+			 $tring = str_replace('Intermarché Contact',"Intermarché",$tring); 
+			 $tring = str_replace('Carrefour Market',"Carrefour",$tring); 
+			 $tring = str_replace('Système U',"U",$tring); 
+			 $tring = str_replace('Station U',"U",$tring); 
+			 $tring = str_replace('BP Express',"BP",$tring); 
+			 $tring = str_replace('INDEPENDANT',"Vide",$tring);
+			 $tring = str_replace('Indépendant sans enseigne',"Vide",$tring);
+			 return $tring;
+		}
+		if ($tring === false || $tring == '') {
+			$tring = "Vide";
+		 return $tring;
+		}
+	};
 ?>

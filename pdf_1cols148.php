@@ -127,7 +127,7 @@ while ($counter < (count($csv)-1)) {
 			$pdf->Cell(10,'', $csv[$counter][3],  $border, 0, 'R', 0, '', 1, false, '', 'M');
 
 			// Image($file, $x='', $y='', $w=0, $h=0, $type='', $link='', $align='', $resize=false, $dpi=300, $palign='', $ismask=false, $imgmask=false, $border=0, $fitbox=false, $hidden=false, $fitonpage=false)
-			$pdf->Image('images/logos/'.ddc($csv[$counter][2]).'.png', 0, (($startY+($interLigne *$counter))+1.45), 6.5, 10, 'PNG', '', '', false, 300, 'M', false, false, 0,'B', false, false);
+			$pdf->Image('images/logos/'.ddc(marques($csv[$counter][2])).'.png', 0, (($startY+($interLigne *$counter))+1.45), 6.5, 10, 'PNG', '', '', false, 300, 'M', false, false, 0,'B', false, false);
 				// echo $csv[$counter][1].'</br>';
 				// echo $csv[$counter][2].' | '.$csv[$counter][3].'</br>';
 			}
@@ -150,7 +150,7 @@ while ($counter < (count($csv)-1)) {
 
 			$pdf->SetXY(36,(($startY+($interLigne *$counter))+3.85));
 			$pdf->Cell(10,'', $csv[$counter][3],  $border, 0, 'R', 0, '', 1, false, '', 'M');
-			$pdf->Image('images/logos/'.ddc($csv[$counter][2]).'.png', 0, (($startY+($interLigne *$counter))+1.4), 6.5, 10, 'PNG', '', '', false, 300, 'M', false, false, 0,'B', false, false);
+			$pdf->Image('images/logos/'.ddc(marques($csv[$counter][2])).'.png', 0, (($startY+($interLigne *$counter))+1.4), 6.5, 10, 'PNG', '', '', false, 300, 'M', false, false, 0,'B', false, false);
 	// echo "Execution - counter vaut $counter</br>";
 	// echo $csv[$counter][1].'</br>';
 	// echo $csv[$counter][2].' | '.$csv[$counter][3].'</br>';

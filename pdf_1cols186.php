@@ -153,7 +153,7 @@ for ($n=0; $n<count($csv); $n++) {
 
 // Image method signature:
 // Image($file, $x='', $y='', $w=0, $h=0, $type='', $link='', $align='', $resize=false, $dpi=300, $palign='', $ismask=false, $imgmask=false, $border=0, $fitbox=false, $hidden=false, $fitonpage=false)
-$pdf->Image('images/logos/'.ddc($csv[$n][2]).'.png', 0, ((saut($n)+(10*$n))+1.4), 6.5, 10, 'PNG', '', '', false, 300, 'M', false, false, 0,'B', false, false);
+$pdf->Image('images/logos/'.ddc(marques($csv[$n][2])).'.png', 0, ((saut($n)+(10*$n))+1.4), 6.5, 10, 'PNG', '', '', false, 300, 'M', false, false, 0,'B', false, false);
 };
 // close and output PDF document
 // $pdf->Output('example_011.pdf', 'I');
