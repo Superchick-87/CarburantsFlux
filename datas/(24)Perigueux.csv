@@ -1,10 +1,10 @@
-GAZOLE,PÉRIGUEUX - CC Le Privilège,Leclerc,"1,645 €/l"
-GAZOLE,MARSAC/L'ISLE - Av. Louis Suder,Auchan,"1,645 €/l"
-SP98,PÉRIGUEUX - Rue P. Semard,Total Access,"1,608 €/l"
-SP98,BOULAZAC - Rte de Lyon,Total Access,"1,615 €/l"
-SP95-E10,PÉRIGUEUX - Rue P. Semard,Total Access,"1,519 €/l"
-SP95-E10,ST-LAURENT/M - RN89,Total,"1,520 €/l"
-SP95,PÉRIGUEUX - CC Le Privilège,Leclerc,"1,618 €/l"
-SP95,MARSAC/L'ISLE - Av. Louis Suder,Auchan,"1,618 €/l"
-E85,PÉRIGUEUX - CC Le Privilège,Leclerc,"0,839 €/l"
-GPLC,TRÉLISSAC - Av. M. Grandou,Total,"0,857 €/l"
+GAZOLE;ST-LAURENT/M - A89 - Aire de Manoire;Total;1,701 €/l
+GAZOLE;COUL.-CHAMIERS - Av. W. Churchill;Intermarché;1,708 €/l
+SP98;MARSAC/L'ISLE - Av. Louis Suder;Auchan;1,649 €/l
+SP98;CHANCELADE - Rue des Fleurs;Intermarché;1,649 €/l
+SP95-E10;PÉRIGUEUX - CC Le Privilège;Leclerc;1,561 €/l
+SP95-E10;MARSAC/L'ISLE - Av. Louis Suder;Auchan;1,561 €/l
+SP95;COUL.-CHAMIERS - Av. W. Churchill;Intermarché;1,617 €/l
+SP95;PÉRIGUEUX - CC Le Privilège;Leclerc;1,618 €/l
+E85;PÉRIGUEUX - CC Le Privilège;Leclerc;0,839 €/l
+GPLC;TRÉLISSAC - Av. M. Grandou;Total;0,857 €/l
