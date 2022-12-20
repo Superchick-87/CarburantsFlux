@@ -1,10 +1,10 @@
-GAZOLE,LIBOURNE - Av. C. Fayat,Total,"1,628 €/l"
-GAZOLE,LIBOURNE - Rte de Castillon,Carrefour,"1,633 €/l"
-SP98,COUTRAS - Rue F. Mitterrand,Leclerc,"1,620 €/l"
-SP98,LIBOURNE - Av. de la Roudet,Leclerc,"1,620 €/l"
-SP95-E10,ST-LOUBÈS - Rte d'Ambarès,Total Access,"1,519 €/l"
-SP95-E10,LIBOURNE - Av. C. Fayat,Total,"1,540 €/l"
-SP95,COUTRAS - Rue F. Mitterrand,Leclerc,"1,575 €/l"
-SP95,LIBOURNE - Av. de la Roudet,Leclerc,"1,583 €/l"
-E85,IZON - Av. des Cavernes,Casino,"0,859 €/l"
-GPLC,GOURS - A89 - Aire Palombières,ROMPETROL,"0,963 €/l"
+GAZOLE;LIBOURNE - Av. C. Fayat;Total;1,723 €/l
+GAZOLE;COUTRAS - Rue F. Mitterrand;Leclerc;1,729 €/l
+SP98;LIBOURNE - Av. de la Roudet;Leclerc;1,637 €/l
+SP98;COUTRAS - Rue F. Mitterrand;Leclerc;1,640 €/l
+SP95-E10;ST-LOUBÈS - Rte d'Ambarès;Total Access;1,560 €/l
+SP95-E10;LIBOURNE - Av. C. Fayat;Total;1,581 €/l
+SP95;LIBOURNE - Av. de la Roudet;Leclerc;1,603 €/l
+SP95;COUTRAS - Rue F. Mitterrand;Leclerc;1,605 €/l
+E85;IZON - Av. des Cavernes;Casino;0,859 €/l
+GPLC;GOURS - A89 - Aire Palombières;ROMPETROL;0,963 €/l

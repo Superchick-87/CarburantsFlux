@@ -33,7 +33,7 @@
 			 $tring = str_replace('Indépendant sans enseigne',"Vide",$tring);
 			 return $tring;
 		}
-		if ($tring === false || $tring == '') {
+		if ($tring === false || $tring === '') {
 			$tring = "Vide";
 		 return $tring;
 		}

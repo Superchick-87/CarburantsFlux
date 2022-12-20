@@ -1,10 +1,10 @@
-GAZOLE,JURANÇON - Av. Henri IV,Total Access,"1,637 €/l"
-GAZOLE,JURANÇON - Av. Henri IV,Total,"1,642 €/l"
-SP98,PAU - Av. J. Mermoz,Total Access,"1,629 €/l"
-SP98,LESCAR - Rte de Bayonne,Carrefour,"1,640 €/l"
-SP95-E10,JURANÇON - Av. Henri IV,Total Access,"1,548 €/l"
-SP95-E10,PAU - Av. J. Mermoz,Total Access,"1,549 €/l"
-SP95,MAZ.-LEZONS - Av. du Gén. de G.,Leclerc,"1,618 €/l"
-SP95,LESCAR - Rte de Bayonne,Carrefour,"1,630 €/l"
-E85,BILLÈRE - Rte de Bayonne,Intermarché,"0,889 €/l"
-GPLC,MAZ.-LEZONS - Av. du Gén. de G.,Leclerc,"0,790 €/l"
+GAZOLE;MAZ.-LEZONS - Av. du Gén. de G.;Leclerc;1,657 €/l
+GAZOLE;SAUVAGNON - Ch. de Severou;;1,689 €/l
+SP98;PAU - Bd de la Paix;Intermarché;1,665 €/l
+SP98;SAUVAGNON - Ch. de Severou;;1,671 €/l
+SP95-E10;MAZ.-LEZONS - Av. du Gén. de G.;Leclerc;1,581 €/l
+SP95-E10;PAU - Bd de la Paix;Intermarché;1,583 €/l
+SP95;MAZ.-LEZONS - Av. du Gén. de G.;Leclerc;1,617 €/l
+SP95;SAUVAGNON - Ch. de Severou;;1,636 €/l
+E85;BILLÈRE - Rte de Bayonne;Intermarché;0,889 €/l
+GPLC;LONS - Av. D. Daurat;Géant;0,799 €/l
