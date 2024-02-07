@@ -1,0 +1,306 @@
+/*  Imports polices
+  ------------------------------------------------------------------------------------------  */
+/*@import url('https://fonts.googleapis.com/css?family=Oswald:300,400,900&display=swap');*/
+@import url('https://fonts.googleapis.com/css?family=Cabin:400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ultra&display = swap'); 
+
+/*  Fin Imports polices
+------------------------------------------------------------------------------------------  */
+
+
+
+body {
+  font-family: 'Roboto', serif;
+  text-align: center;
+}
+footer{
+    height:18px;
+    margin-top:15px;
+    background-image:url(../images/signature.svg);
+    background-repeat:no-repeat;
+    background-position:center;
+}
+h3{
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+h4{
+    font-size: 18px;
+    font-weight: 500;
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 2px;
+}
+h5{
+  margin-top: 5px;
+  margin-bottom: 0px;
+}
+table{
+  margin-top: 5px;
+}
+img{
+  width: 40px;
+}
+.consigne{
+  font-size: medium;
+  /*font-style: italic;*/
+  margin: 5px auto;
+}
+.marque{
+    height: 40px;
+    margin-right: 5px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+input[type=button]{
+  cursor: pointer;
+}
+hr{
+  border-top: 1px dotted black;
+  width: 95%;
+}
+.source{
+  width: 95%;
+  margin: 0px auto;
+}
+p{
+  margin: 0px;
+  font-size: 12px;
+}
+
+th p {
+  font-size: 12px;
+  font-weight: 400;
+  margin: 0px auto;
+  height: 12px;
+  line-height: 10px;
+}
+.lignepicto{
+  line-height: 15px;
+}
+.compteur{
+  background-color: black;
+  color: white;
+  border-radius: 50%;
+  margin-left: 4px;
+  padding: 2px;
+  height: 17px;
+  width: 17px;
+  text-align: center;
+  font-size: 13px;
+  line-height: 17px;
+}
+.flex{
+  display: flex;
+}
+.justif-align-center{
+  justify-content: center;
+  align-items: center;
+}
+.rechercheMob{
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    border: solid 1px black;
+    border-radius: 50%;
+    margin: 20px auto 10px;
+    cursor: pointer;
+    background-image: url(../images/search.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 70px;
+}
+.rechercheMob:hover {
+  background-color: #6c6a6a;
+  color: white;
+}
+#recherceDesk{
+  display: none;
+}
+
+.suppression {
+    padding: 2px;
+    height: 40px;
+    width: 40px;
+    font-size: 43px;
+    line-height: 40px;
+    border-radius: 0px 7px 7px 0px;
+    border: solid 2px black;
+    background-color: black;
+    color: white;
+    padding: 2px;
+    text-align: center;
+    cursor: pointer;
+    background-image: url(../images/supp.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 30px; 
+ } 
+
+.suppression:hover {
+  background-color: #6c6a6a;
+  color: white;
+}
+.erreur{
+    background-color: #ffdfdd;
+    color: black;
+    width: 250px;
+    font-size: 14px;
+    font-style: italic;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 0px auto;
+}
+.erreur1_visu{
+  background : no-repeat center url('../images/Erreur1.png');
+  height: 300px;
+}
+.erreur2_visu{
+  background : no-repeat center url('../images/Erreur2.png');
+  height: 300px;
+}
+.erreur_mess{
+  font-size: 16px;
+  font-weight: 300;
+}
+.erreur_messtitre{
+  font-size: 35px;
+  font-weight: 300;
+}
+#done{
+    /*margin: 0px auto;*/
+    /*width: 70%;*/
+}
+tr{
+  font-family: 'Oswald', serif;
+  font-size: 15px;
+  font-weight: 500;
+}
+td{
+  width: 16.6%;
+}
+.filet{
+  border-left: 1px dotted black;
+  padding-left: 5px;
+}
+.infosup{
+  padding-top: 11px;
+  margin-left: 5px;
+}
+.infomaj{
+  line-height: 10px;
+  font-weight: 300;
+  margin-bottom: 5px;
+}
+.justifleft{
+  text-align: start;
+}
+/* Alignements */
+.espacebottom{
+  margin-bottom: 10px;
+}
+.justifcenter{
+  justify-content: center;
+}
+/* Fin Alignements */
+
+/* Bouton radio */
+
+/* HIDE RADIO */
+[type=radio] { 
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+/* IMAGE STYLES */
+[type=radio] + img {
+  cursor: pointer;
+  opacity: 50%;
+}
+/* CHECKED STYLES */
+[type=radio]:checked + img , [type=radio]:hover + img {
+  /*outline: 2px solid #f00;*/
+  opacity: 100%;
+}
+
+/* Fin Bouton radio */
+
+
+/* Couleur famille */
+.price_gazole{
+  background-color: #FFD145;
+  color : black;
+}
+.price_sp98{
+  background-color: #067c3b;
+  color: white;
+}
+.price_e10{
+  background-color: #00B944;
+  color: white;
+}
+.price_sp95{
+  background-color: #067c3b;
+  color: white;
+}
+.price_e85{
+  background-color: #00C3D9;
+  color: white;
+}
+.price_gplc{
+  background-color: #006E96;
+  color: white;
+}
+
+@media (min-width: 600px) {
+  #done{
+    margin: 0px auto;
+    width: 70%;
+  }
+  .source{
+    width: 80%;
+  }
+  hr{
+    width: 100%;
+  }
+  #recherceMob{
+    display: none;
+  }
+  #recherceDesk{
+    display: block;
+  }
+  .recherceDesk{
+    margin: 10px auto;
+    background-color: black;
+    color: white;
+    border-radius: 8px;
+    height: 34px;
+    width: 158px;
+    font-size: 15px;
+  }
+  .recherceDesk:hover {
+    background-color: #6c6a6a;
+    color: white;
+  }
+  .suppression{
+    border-radius: 0px 7px 7px 0px;
+    border: solid 1px black;
+    background-color: black;
+    color: white;
+    padding: 2px;
+    height: 31px;
+    width: 20px;
+    text-align: center;
+    font-size: 23px;
+    line-height: 31px;
+    cursor: pointer;
+    background-image: url(../images/supp.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 16px;
+  }
+}
