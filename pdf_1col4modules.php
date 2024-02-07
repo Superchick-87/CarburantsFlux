@@ -99,10 +99,14 @@ $border = 0;
 $fontname = TCPDF_FONTS::addTTFfont('/TCPDF-master/fonts/UtopiaStd-BlackHeadline.ttf', 'TrueTypeUnicode', '', 96);
 $pdf->SetFont($font_family = 'utopiastdblackheadline', '', 14, '', false);
 $pdf->setFont($font_family = 'roboto', '', 10, '', false);
+// $pdf->setFont($font_family='robotolight', 10, '', false);
 // $pdf->setFont($font_family = 'robotomedium', 10, '', false);
+// $pdf->setFont($font_family='robotoi', 10, '', false);
+// $pdf->setFont($font_family='robotocondensed', '', false);
+// $pdf->setFont($font_family='robotobcondensed', '', false);
+// $pdf->setFont($font_family='robotoblack', '', false);
 
 // $pdf->setFont($font_family = 'utopiastd', $font_variant = '', $font_size = 10);
-// $pdf->setFont('utopiastdblackheadline', '', 10);
 
 $pdf->ImageSVG('images/Fond_1_4mod.svg', 0, 0, 48.9, 157.7, '', '', '', $border, false);
 $fitbox = 'R';
